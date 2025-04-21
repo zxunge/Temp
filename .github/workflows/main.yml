@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME=quarkos-24.04-x64.r2.iso
+          NAME=exa.lnx.a_665.apk
           TAG=24.04
           
-          wget -q https://downloads.sourceforge.net/project/quark-os/stable/1-plasma-live-media/quarkos-24.04-x64.r2.iso?ts=gAAAAABoBKDAhTAydqfS-UvCIrHNDmUYz5JxdbA_eSH-3FUe-tyZcMwfZQ8WAoH4iB6_abm_bpUBDtysnkCXZWZLvbOUPfg4lA%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fquark-os%2Ffiles%2Fstable%2F1-plasma-live-media%2Fquarkos-24.04-x64.r2.iso%2Fdownload
+          wget -q https://f-droid.org/repo/exa.lnx.a_665.apk
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
