@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME=exa.lnx.a_665.apk
-          TAG=24.04
+          NAME=slax-64bit-debian-12.2.0.iso
+          TAG=12.2.0
           
-          wget -q https://f-droid.org/repo/exa.lnx.a_665.apk
+          wget -q https://dropcube.net/dl/fUysQ/QJ6G3xiLnQvJ9Ge/slax-64bit-debian-12.2.0.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
