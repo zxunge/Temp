@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME=cn_win_srv_2003_r2_enterprise_x64_with_sp2_vl_cd1_X13-47314.iso
-          TAG=2003-cd1
+          NAME=cn_win_srv_2003_r2_enterprise_x64_with_sp2_vl_cd2_X13-35321.iso
+          TAG=2003-cd2
           
-          wget -q https://archive.org/download/WinSrv2003R2CHS/cn_win_srv_2003_r2_enterprise_x64_with_sp2_vl_cd1_X13-47314.iso
+          wget -q https://archive.org/download/WinSrv2003R2CHS/cn_win_srv_2003_r2_enterprise_x64_with_sp2_vl_cd2_X13-35321.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
