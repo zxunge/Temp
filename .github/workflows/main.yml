@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME=slax-64bit-debian-12.2.0.iso
-          TAG=12.2.0
+          NAME=alpine-extended-3.21.3-x86_64.iso
+          TAG=3.21.3
           
-          wget -q https://dropcube.net/dl/fUysQ/QJ6G3xiLnQvJ9Ge/slax-64bit-debian-12.2.0.iso
+          wget -q https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-extended-3.21.3-x86_64.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
