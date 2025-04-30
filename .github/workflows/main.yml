@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME="Firefox Setup 128.10.0esr.exe"
-          TAG=128.10.0
+          NAME=5E9219C2-57D9-43D7-95A5-5915B2C372BB/14393.0.161119-1705.RS1_REFRESH_SERVERESSENTIALS_OEM_X64FRE_ZH-CN.ISO
+          TAG=2016Ess
           
-          wget -q https://ftp.mozilla.org/pub/firefox/releases/128.10.0esr/win64/zh-CN/Firefox%20Setup%20128.10.0esr.exe
+          wget -q https://download.microsoft.com/download/5/E/9/5E9219C2-57D9-43D7-95A5-5915B2C372BB/14393.0.161119-1705.RS1_REFRESH_SERVERESSENTIALS_OEM_X64FRE_ZH-CN.ISO
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
