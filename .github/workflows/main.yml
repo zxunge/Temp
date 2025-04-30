@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME=14393.0.161119-1705.RS1_REFRESH_SERVERESSENTIALS_OEM_X64FRE_ZH-CN.ISO
-          TAG=2016Ess
+          NAME=Windows_Server_2008_R2_x64.iso
+          TAG=2008
           
-          wget -q https://download.microsoft.com/download/5/E/9/5E9219C2-57D9-43D7-95A5-5915B2C372BB/14393.0.161119-1705.RS1_REFRESH_SERVERESSENTIALS_OEM_X64FRE_ZH-CN.ISO
+          wget -q https://archive.org/download/Windows_Server_2008_R2_x64.iso_reupload/Windows_Server_2008_R2_x64.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
