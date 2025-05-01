@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME=9600.16384.WINBLUE_RTM.130821-1623_X64FRE_SERVER_SOLUTION_ZH-CN-IRM_SSSO_X64FRE_ZH-CN_DV5.ISO
-          TAG=2012r2
+          NAME="tiny10 x64 beta 2.iso"
+          TAG=tiny10b2
           
-          wget -q https://download.microsoft.com/download/8/1/6/816441D4-3F4E-412C-847A-2463146FAF25/9600.16384.WINBLUE_RTM.130821-1623_X64FRE_SERVER_SOLUTION_ZH-CN-IRM_SSSO_X64FRE_ZH-CN_DV5.ISO
+          wget -q https://archive.org/download/tiny-10_202301/tiny10%20x64%20beta%202.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
