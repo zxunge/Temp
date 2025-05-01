@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME="Tiny10.iso"
-          TAG=7lite
+          NAME="tiny10 b4 x64.iso"
+          TAG=tiny10b4
           
-          wget -q https://archive.org/download/tiny10_202302/Tiny10.iso
+          wget -q https://archive.org/download/tiny-10-b-3/tiny10%20b4%20x64.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
