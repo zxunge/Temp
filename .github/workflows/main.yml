@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME=Windows_Server_2008_R2_x64.iso
-          TAG=2008
+          NAME=windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe
+          TAG=kb976932
           
-          wget -q https://archive.org/download/Windows_Server_2008_R2_x64.iso_reupload/Windows_Server_2008_R2_x64.iso
+          wget -q https://catalog.s.download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
