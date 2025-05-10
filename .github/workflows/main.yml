@@ -10,24 +10,31 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME="tiny11 core x64 beta 1.iso"
-          TAG=tiny11coreb1
+          NAME="tiny11 24H2 AMD64.iso"
+          TAG=tiny11-24h2
           
-          wget -q https://archive.org/download/tiny-11-core-x-64-beta-1/tiny11%20core%20x64%20beta%201.iso
+          wget -q https://archive.org/download/tiny11-2409/tiny11%2024H2%20AMD64.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
             echo "RELEASE_TAG=${TAG}" >> $GITHUB_OUTPUT
           fi
 
-      - name: Publish release
-        uses: ncipollo/release-action@v1
+      - name: Upload Artifact
+        id: upload
+        uses: actions/upload-artifact@v4
         with:
-          allowUpdates: true
-          tag: ${{ steps.dload.outputs.RELEASE_TAG }}
-          name: ${{ steps.dload.outputs.RELEASE_NAME }}
-          artifacts: "${{ steps.dload.outputs.RELEASE_NAME }}"
-          body: |
-            This is ${{ steps.build.outputs.RELEASE_NAME }}.
-          token: ${{ secrets.GITHUB_TOKEN }}
+          name: "${{ steps.dload.outputs.RELEASE_NAME }}"
+          path: "${{ steps.dload.outputs.RELEASE_NAME }}"
+
+      #- name: Publish release
+       # uses: ncipollo/release-action@v1
+        #with:
+         # allowUpdates: true
+          #tag: ${{ steps.dload.outputs.RELEASE_TAG }}
+          #name: ${{ steps.dload.outputs.RELEASE_NAME }}
+          #artifacts: "${{ steps.dload.outputs.RELEASE_NAME }}"
+          #body: |
+          #  This is ${{ steps.build.outputs.RELEASE_NAME }}.
+          #token: ${{ secrets.GITHUB_TOKEN }}
          
