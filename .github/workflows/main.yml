@@ -11,10 +11,10 @@ jobs:
       - name: download
         id: dload
         run: |
-          NAME="tiny10 x64 23h2.iso"
+          NAME="17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_zh-cn_1.iso"
           TAG=tiny10-23h2
           
-          wget -q https://archive.org/download/tiny-10-23-h2/tiny10%20x64%2023h2.iso
+          wget -q https://software-download.microsoft.com/download/pr/17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_zh-cn_1.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
