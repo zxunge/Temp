@@ -13,7 +13,7 @@ jobs:
           NAME="tiny11 24H2 AMD64.iso"
           TAG=tiny11-24h2
           
-          curl -O https://archive.org/download/tiny11-2409/tiny11%2024H2%20AMD64.iso
+          wget https://archive.org/download/tiny11-2409/tiny11%2024H2%20AMD64.iso
           
           if [[ -v GITHUB_WORKFLOW ]]; then
             echo "RELEASE_NAME=${NAME}" >> $GITHUB_OUTPUT
